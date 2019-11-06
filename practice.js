@@ -266,9 +266,10 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
-
-
+function longer(arr1, arr2){
+  if (arr1.length > arr2.length){return arr1}
+  else {return arr2}
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -278,9 +279,19 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  let same = [];
 
+  for (let i = 0; i < arr1.length; i++){
+    for (let j = 0; j< arr2.length; j++){
+      if (arr1[i] === arr2[j]){
+        same.push(arr1[i]);
+      }
+    }
+  }
 
+  return same;
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -319,18 +330,30 @@ var colt = {
   After that, console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+function fill(arr, obj){
+  let tempArr = arr;
+  tempArr.push(obj);
 
+  return tempArr;
+}
 
+devMountainEmployees = fill(devMountainEmployees, joe);
+devMountainEmployees = fill(devMountainEmployees, cahlan);
+devMountainEmployees = fill(devMountainEmployees, ryan);
+devMountainEmployees = fill(devMountainEmployees, colt);
+
+console.log(devMountainEmployees.length);
 
 /*
   Now let's say Cahlan has to take a leave of absence.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
-
-
+for (let i = 0; i < devMountainEmployees.length; i++){
+  if (devMountainEmployees[i] === cahlan){
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 ////////// PROBLEM 13 //////////
 
