@@ -363,9 +363,7 @@ for (let i = 0; i < devMountainEmployees.length; i++){
   Create an empty array called users.
 */
 
-//Code Here
-
-
+var users = [];
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties: name, email, password, username.
@@ -384,9 +382,21 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+var user2 = {
+    name: 'Jeff Zivkovic',
+    email: 'jeff.zivkovic@mail.mail',
+    password: 'puppies',
+    username: 'yeetyeet'
+};
 
+var user3 = {
+  name: 'Todd Sodd',
+  email: 'todd.sodd@mail.mail',
+  password: 'coolguy',
+  username: 'toddysoddy'
+};
 
+users = [user1, user2, user3];
 
 /*
   Now you have a very common data structure. 
@@ -398,9 +408,11 @@ var user1 = {
   Once you find the array index he's located in, delete him from the array.
 */
 
-//Code Here
-
-
+for (let i = 0; i < users.length; i++){
+  if(users[i].email === 'mark.mciver@devmounta.in'){
+    users.splice(i, 1);
+  }
+}
 
 /*
   The activity we just did is very much how data works in 'the real world'.
